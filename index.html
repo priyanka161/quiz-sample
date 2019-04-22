@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quiz</title>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script type="text/jsx" src="qaapp.js"></script>
+</head>
+<body>
+<div id="content" class="container"></div>
+<script type="text/jsx">
+	var test = {
+		name: "Sample Test",
+		description:"sample questions.",
+		passCutoff: 0.33,		
+		applyNegativeMarking: false,
+		time: 1,
+		questions: [
+		{
+			   no: "1",
+			   qtext:"What does JSON stand for?",
+						options:[
+							{text:"Javascript Object Notation"},
+							{text:"Javascript Oriented Notation"},
+							{text:"Javascript Organic Notation"},
+						         ],
+					ans:"Javascript Object Notation",
+					marks: 4
+		},
+		{
+			no: "2",
+			qtext:"Which company maintains ReactJS?",
+					options:[
+						{text:"Facebook"},
+						{text:"Google"},
+						{text:"Airbnb"},
+					],
+			ans:"Facebook",
+			marks: 3
+		},
+		{
+					no: "3",
+					qtext:"Is it an antipattern to include props in the getInitialState method of a component?",
+						options:[
+							{text:"Yes"},
+							{text:"No"},
+						],
+			ans:"Yes",
+			marks: 2
+		},
+		
+		{
+			no: "4",
+			qtext:"Is ReactJS a framework by itself?",
+					options:[
+						{text:"Yes"},
+						{text:"No"},
+					],
+			ans:"Yes",
+			marks: 1
+		},
+		]
+	}
+	
+	React.render( <Test details={test}/>, document.getElementById( "content" ) );
+</script>
+</body>
+</html>
+
+
